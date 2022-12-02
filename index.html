@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./pages/index.css">
+    <title>Место</title>
+</head>
+<body class="page">
+    <header class="header">
+        <a href="#" class="header__link">
+            <img src="./images/logo.svg" alt="" class="header__logo">
+        </a>
+    </header>
+    <main class="main">
+        <section class="profile">
+            <div class="profile__info">
+                <img src="./images/avatar.png" alt="" class="profile__avatar">
+                <div class="profile__person">
+                    <div class="profile__title">
+                        <h1 class="profile__name">Жак-Ив Кусто</h1>
+                        <a href="#" class="profile__edit"></a>
+                        <!--<img src="./images/pen.svg" alt="" class="profile__edit">
+                        <button class="profile__edit"></button>-->
+                    </div>
+                    <p class="profile__profession">Исследователь океана</p>
+                </div>
+            </div>
+            <!--<img src="./images/reactangle.svg" alt="" class="profile__plus-button">-->
+            <a href="#" class="profile__plus-button"></a>
+            
+        </section>        
+        <section class="elements">
+            <div class="elements__item">
+                <img src="./images/karachaevsk.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Карачаевск</h3>
+                    <img src="./images/black-heart.png" alt="" class="elements__like elements__like_active">
+                </div>
+            </div>
+            <div class="elements__item">
+                <img src="./images/elbrus.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Эльбрус</h3>
+                    <img src="./images/like-heart.svg" alt="" class="elements__like">
+                </div>
+            </div>
+            <div class="elements__item">
+                <img src="./images/dombai.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Домбай</h3>
+                    <img src="./images/like-heart.svg" alt="" class="elements__like">
+                </div>
+            </div>
+            <div class="elements__item">
+                <img src="./images/elbrus.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Эльбрус</h3>
+                    <img src="./images/like-heart.svg" alt="" class="elements__like">
+                </div>
+            </div>
+            <div class="elements__item">
+                <img src="./images/dombai.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Домбай</h3>
+                    <img src="./images/like-heart.svg" alt="" class="elements__like">
+                </div>
+            </div>
+            <div class="elements__item">
+                <img src="./images/karachaevsk.jpg" alt="" class="elements__photo">
+                <div class="elements__description">
+                    <h3 class="elements__title">Карачаево-Черкессия</h3>
+                    <img src="./images/like-heart.svg" alt="" class="elements__like">
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer class="footer">
+        <p class="footer__copyright">© 2020 Mesto Russia</p>
+    </footer>
+    <section class="popup">
+        <form action="" class="popup__container">
+            <img src="./images/close.svg" alt="" class="popup__close">
+            <h2 class="popup__title">Редактировать профиль</h2>
+            <label class="popup__area">
+                <input type="text" class="popup__input" name="name" value="Жак-Ив Кусто">                
+            </label>
+            <label class="popup__area">
+                <input type="text" class="popup__input" name="profession" value="Исследователь океана">                
+            </label>
+            <input type="submit" value="Сохранить" class="popup__submit">
+        </form>
+    </section>
+    <script src="./scripts/script.js"></script>
+</body>
+</html>

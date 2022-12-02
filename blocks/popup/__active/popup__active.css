@@ -1,0 +1,5 @@
+.popup__active {
+    display: block; 
+    pointer-events: all;
+    transition: 0.5s all;
+}
