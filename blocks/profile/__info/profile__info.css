@@ -2,11 +2,18 @@
     display: flex;
 }
 
+@media screen and (max-width: 584px) {
+    .profile__info {
+        display: flex;
+        flex-direction: column;
+        align-items: center;    
+    }
+}
+
 @media screen and (max-width: 320px) {
     .profile__info {
         display: flex;
         flex-direction: column;
-        align-items: center;
-    
+        align-items: center;    
     }
 }

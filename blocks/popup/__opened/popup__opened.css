@@ -1,0 +1,6 @@
+.popup__opened {
+    display: flex;
+    pointer-events: all;
+    transition: 0.5s all;
+    justify-content: center;
+}

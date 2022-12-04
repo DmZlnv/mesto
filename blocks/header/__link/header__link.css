@@ -1,11 +1,12 @@
 .header__link {
-    display: block;
-    padding: 45px 0 41px;
-    max-width: 123px;
+    display: inline-block;
+    max-height: 33px;
 }
 
-@media screen and (max-width: 320px) {
+
+@media screen and (max-width: 584px) {
     .header__link {
-        padding: 28px 0 32px 27px;
+        margin: 0 auto;
     }
 }
+
