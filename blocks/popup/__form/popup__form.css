@@ -1,13 +1,13 @@
-.popup__form {    
+.popup__form {
     color: #000000;
     max-width: 430px;
-    position: relative;    
+    position: relative;
     display: flex;
     flex-direction: column;
     align-self: center;
     gap: 30px;
     box-sizing: border-box;
-    padding: 34px 36px 37px 36px;    
+    padding: 34px 36px 37px 36px;
 }
 
 @media screen and (max-width: 430px) {
