@@ -1,14 +1,21 @@
 .profile__edit {
-    height: 24px;
-    width: 24px;
-    border: 1px solid #FFFFFF;
-    background-image: url(../../../images/pen.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    cursor: pointer;
+  height: 24px;
+  width: 24px;
+  border: 1px solid #ffffff;
+  background-image: url(../../../images/pen.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 .profile__edit:hover {
-    opacity: .6;
+  opacity: 0.6;
+}
+
+@media screen and (max-width: 320px) {
+  .profile__edit {
+    height: 18px;
+    width: 18px;
+  }
 }

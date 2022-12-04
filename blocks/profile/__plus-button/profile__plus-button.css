@@ -1,22 +1,26 @@
 .profile__plus-button {
-    border: 2px solid #FFFFFF;
-    border-radius: 2px;
-    height: 50px;
-    width: 150px;
-    background-image: url(../../../images/reactangle.svg);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: transparent;
-    transition: opacity ease-in-out .3s;
-    cursor: pointer;
+  border: 2px solid #ffffff;
+  border-radius: 2px;
+  height: 22px;
+  width: 22px;
+  padding: 14px 64px;
+  background-image: url(../../../images/reactangle.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  transition: opacity ease-in-out 0.3s;
+  cursor: pointer;
+  box-sizing: content-box;
 }
 
-.profile__plus-button:hover {    
-    opacity: 0.6;
+.profile__plus-button:hover {
+  opacity: 0.6;
 }
 
 @media screen and (max-width: 320px) {
-    .profile__plus-button {
-        padding: 17px 134px;
-    }
+  .profile__plus-button {
+    height: 16px;
+    width: 16px;
+    padding: 17px 134px;
+  }
 }

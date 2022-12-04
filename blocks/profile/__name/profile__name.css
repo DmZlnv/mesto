@@ -10,10 +10,20 @@
   white-space: nowrap;
 }
 
+
+@media screen and (max-width: 584px) {
+  .profile__name {
+    font-size: 27px;
+    line-height: 32px;
+    padding-right: 10px;
+  }
+}
+
 @media screen and (max-width: 320px) {
   .profile__name {
     font-size: 27px;
     line-height: 32px;
     padding-right: 10px;
+    max-width: 200px;
   }
 }

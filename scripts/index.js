@@ -8,14 +8,14 @@ let jobInput = document.querySelector('input[name="profession"]');
 let nameProfile = document.querySelector('.profile__name');
 let jobProfile = document.querySelector('.profile__profession')
 
-function openPopup() {    
-    popup.classList.add('popup__opened');
+function openPopup() {
+    popup.classList.add('popup_opened');
     nameInput.value = nameProfile.textContent;
     jobInput.value = jobProfile.textContent;
 }
 
 function closePopup() {
-    popup.classList.remove('popup__opened');
+    popup.classList.remove('popup_opened');
 }
 
 function handleFormSubmit(evt) {
@@ -25,6 +25,6 @@ function handleFormSubmit(evt) {
     closePopup();
 }
 
-formElement.addEventListener('submit', handleFormSubmit); 
+formElement.addEventListener('submit', handleFormSubmit);
 profileEdit.addEventListener('click', openPopup);
 popupClose.addEventListener('click', closePopup);

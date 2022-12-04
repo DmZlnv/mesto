@@ -1,18 +1,19 @@
 .popup__form {
-    color: #000000;
-    max-width: 430px;
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    gap: 30px;
-    box-sizing: border-box;
-    padding: 34px 36px 37px 36px;
+  color: #000000;
+  max-width: 430px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  gap: 30px;
+  box-sizing: border-box;
+  padding: 34px 36px 37px 36px;
 }
 
+
 @media screen and (max-width: 430px) {
-    .popup__container {
-        max-width: 284px;
-        padding: 22px 25px;
-    }
+  .popup__form {
+    padding: 25px 22px;
+    max-width: 320px;
+  }
 }
