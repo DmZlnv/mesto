@@ -20,5 +20,6 @@
     grid-template-columns: 1fr;
     grid-template-rows: repeat(1fr);
     max-width: 284px;
+    gap: 21px 17px;
   }
 }

@@ -21,7 +21,8 @@
   .profile__profession {
     font-size: 14px;
     line-height: 17px;
-    text-align: center;
+    text-align: left;
     max-width: 220px;
+    padding-left: 14px;
   }
 }
