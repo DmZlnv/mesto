@@ -2,12 +2,11 @@
   position: relative;
   max-width: 480px;
   display: flex;
-  margin-top: 150px;
+  align-self: center;
 }
 
 @media screen and (max-width: 430px) {
   .popup__container {
     max-width: 284px;
-    margin-top: 0px;
   }
 }
