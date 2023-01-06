@@ -28,8 +28,10 @@
       </div>
       <button type="button" class="profile__plus-button" aria-label="Кнопка добавления"></button>
     </section>
+    
     <section class="elements">
-      <article class="elements__item">
+      
+      <!--<article class="elements__item">
         <img src="./images/karachaevsk.jpg" alt="Фото Карачаевска" class="elements__photo">
         <div class="elements__description">
           <h3 class="elements__title">Карачаевск</h3>
@@ -70,15 +72,15 @@
           <h3 class="elements__title">Карачаево-Черкессия</h3>
           <button type="button" class="elements__like"></button>
         </div>
-      </article>
+      </article>-->
     </section>
   </main>
   <footer class="footer">
     <p class="footer__copyright">© 2020 Mesto Russia</p>
   </footer>
-  <div class="popup">
+  <div class="popup popup__editprofile">
     <div class="popup__container">
-      <button type="button" class="popup__close"></button>
+      <button type="button" class="popup__close popup__close_profile"></button>
       <form class="popup__form" name="popup__editprofile">
         <h2 class="popup__title">Редактировать профиль</h2>
         <label class="popup__area">
@@ -87,10 +89,42 @@
         <label class="popup__area">
           <input type="text" class="popup__input" name="profession" value="" placeholder="" required>
         </label>
-        <input type="submit" value="Сохранить" class="popup__submit">
+        <input type="submit" value="Сохранить" class="popup__submit popup__submit-editprofile">
       </form>
     </div>
   </div>
-  <script src="./scripts/index.js"></script>
+  <div class="popup popup__editcard">
+    <div class="popup__container">
+      <button type="button" class="popup__close popup__close_card"></button>
+      <form class="popup__form" name="popup__editcard ">
+        <h2 class="popup__title">Место</h2>
+        <label class="popup__area">
+          <input type="text" class="popup__input popup__input_type_place-title" name="place-title" value="Название" placeholder="" required>
+        </label>
+        <label class="popup__area">
+          <input type="text" class="popup__input popup__input_type_place-img" name="place-img" value="Ссылка на картинку" placeholder="" required>
+        </label>
+        <input type="submit" value="Сохранить" class="popup__submit popup__submit-editcard">
+      </form>
+    </div>
+  </div>
+  <div class="popup popup__full-image">
+      <div class="popup__gallery">
+        <button type="button" class="popup__close popup__close_image"></button>
+        <img src="" alt="" class="popup__bigimage">
+        <p class="popup__descimage"></p>
+      </div>
+  </div>
+  <template id="elements-template">
+    <article class="elements__item">
+      <img src="" alt="" class="elements__photo">
+      <div class="elements__description">
+        <h3 class="elements__title"></h3>
+        <button type="button" class="elements__like"></button>
+        <button type="button" class="elements__trash"></button>
+      </div>
+    </article>
+    </template>
+  <script defer src="./scripts/index.js"></script>
 </body>
 </html>
