@@ -30,7 +30,7 @@ const initialCards = [
 let popup = document.querySelector('.popup');
 let popupCont = document.querySelector('.popup__container');
 let profileEdit = document.querySelector('.profile__edit');
-let popupEditProfile = document.querySelector('.popup__editprofile');
+let popupEditProfile = document.querySelector('.editprofile');
 const popupClose = document.querySelector('.popup__close');
 let formElement = document.querySelector('.popup__form');
 let nameInput = document.querySelector('input[name="name"]');
@@ -44,11 +44,11 @@ let placeImgInput = document.querySelector('input[name="place-img"]');
 let nameProfile = document.querySelector('.profile__name');
 let jobProfile = document.querySelector('.profile__profession');
 let cardEdit = document.querySelector('.profile__plus-button');
-let popupCardEdit = document.querySelector('.popup__editcard');
+let popupCardEdit = document.querySelector('.editcard');
 let popupSubmitCard = document.querySelector('.popup__submit-editcard');
 let popupSubmitProfile = document.querySelector('.popup__submit-editprofile');
 
-let popupFullImage = document.querySelector('.popup__full-image');
+let popupFullImage = document.querySelector('.full-image');
 let popupBigImage = document.querySelector('.popup__bigimage');
 let popupDescImage = document.querySelector('.popup__descimage');
 let popupCloseImage = document.querySelector('.popup__close_image')
