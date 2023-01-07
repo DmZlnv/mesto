@@ -42,6 +42,7 @@ let placeImgInput = document.querySelector('input[name="place-img"]');
 let nameProfile = document.querySelector('.profile__name');
 let jobProfile = document.querySelector('.profile__profession');
 const cardEdit = document.querySelector('.profile__plus-button');
+const profileEdit = document.querySelector('.profile__edit');
 const popupCardEdit = document.querySelector('.editcard');
 const popupSubmitCard = document.querySelector('.popup__submit-editcard');
 const popupSubmitProfile = document.querySelector('.popup__submit-editprofile');
