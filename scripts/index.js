@@ -93,16 +93,16 @@ closeButtons.forEach((button) => {
 
 
 
-function createCard(item) {
+function createCard(name, link) {
 
   const cardElement = templateCard.querySelector('.elements__item').cloneNode(true);
   const elementLike = cardElement.querySelector('.elements__like');
   const elementDelete = cardElement.querySelector('.elements__trash');
   const elementImage = cardElement.querySelector('.elements__photo');
 
-  cardElement.querySelector('.elements__title').textContent = item.name;
-  elementImage.src = item.link;
-  elementImage.alt = item.name;
+  cardElement.querySelector('.elements__title').textContent = name;
+  elementImage.src = link;
+  elementImage.alt = name;
 
 
   elementLike.addEventListener('click', function (event) {
@@ -114,9 +114,9 @@ function createCard(item) {
 
   elementImage.addEventListener('click', function () {
     openPopup(popupFullImage);
-    popupBigImage.src = item.link;
-    popupDescImage.textContent = item.name;
-    popupBigImage.alt = item.name;
+    popupBigImage.src = link;
+    popupDescImage.textContent = name;
+    popupBigImage.alt = name;
   })
 
 
@@ -129,7 +129,7 @@ function addCard(name, link) {
 }
 
 initialCards.reverse().forEach((item) => {
-  addCard(item);
+  addCard(item.name, item.link);
 })
 
 popupEditProfile.addEventListener('submit', function (evt) {
