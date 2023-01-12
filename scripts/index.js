@@ -61,6 +61,7 @@ const elementImage = element.querySelector('.elements__photo');
 
 //Функция открытия попапа
 function openPopup(item) {
+  document.addEventListener('keyup', keyHandler)
   item.classList.add('popup_opened');
 }
 
@@ -81,16 +82,22 @@ cardEdit.addEventListener('click', function () {
 
 //Функция закрытия попапа
 function closePopup(item) {
+  document.removeEventListener('keyup', keyHandler)
   item.classList.remove('popup_opened');
 }
 
-//Кнопки закрытия
 
-closeButtons.forEach((button) => {
-  const popup = button.closest('.popup');
-  button.addEventListener('click', () => closePopup(popup));
-});
-
+const popups = document.querySelectorAll('.popup');
+popups.forEach((popup) => {
+  popup.addEventListener('mousedown', (evt) => {
+    if (evt.target.classList.contains('popup_opened')) {
+      closePopup(popup);
+    }
+    if (evt.target.classList.contains('popup__close')) {
+      closePopup(popup);
+    }
+  })
+})
 
 
 function createCard(name, link) {
@@ -132,6 +139,7 @@ initialCards.reverse().forEach((item) => {
   addCard(item.name, item.link);
 })
 
+
 popupEditProfile.addEventListener('submit', function (evt) {
   evt.preventDefault();
   nameProfile.textContent = nameInput.value;
@@ -145,3 +153,42 @@ popupCardEdit.addEventListener('submit', function (evt) {
   closePopup(popupCardEdit);
   evt.target.reset();
 });
+
+//6 Sprint
+
+const validationConfig = {
+  formSelector: '.popup__form',
+  inputSelector: '.popup__input',
+  submitButtonSelector: '.popup__submit',
+  activeButtonClass: 'popup__submit_valid',
+  inactiveButtonClass: 'popup__submit_invalid',
+  inputErrorClass: 'popup__input_type_error',
+  errorClass: 'popup__input-error_visible'
+}
+
+function handleSubmit(evt) {
+  evt.preventDefault();
+  console.log(
+    {
+      username: nameInput.value,
+      profession: jobInput.value,
+    }
+  )
+}
+
+
+
+
+function keyHandler(evt) {
+  if (evt.key === 'Escape') {
+    const popupList = document.querySelectorAll('.popup_opened')
+    popupList.forEach((popup) => {
+      if (popup.classList.contains('popup_opened')) {
+        closePopup(popup)
+      };
+    });
+  }
+}
+
+
+enableValidation(validationConfig);
