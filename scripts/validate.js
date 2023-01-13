@@ -12,7 +12,6 @@ function hideInputError(formElement, inputElement, config) {
     inputElement.classList.remove(config.inputErrorClass)
 }
 
-
 function checkInputValidity(formElement, inputElement, config) {
     if (inputElement.validity.valid) {
         hideInputError(formElement, inputElement, config);
@@ -24,11 +23,11 @@ function checkInputValidity(formElement, inputElement, config) {
 
 function hasInvalidInput(inputList) {
     return inputList.some((inputElement) => !inputElement.validity.valid)
-    
+
 }
 
 function toggleButtonState(inputList, buttonElement, config) {
-    if(hasInvalidInput(inputList)) {
+    if (hasInvalidInput(inputList)) {
         buttonElement.classList.remove(config.activeButtonClass)
         buttonElement.classList.add(config.inactiveButtonClass);
         buttonElement.disabled = true;
@@ -40,16 +39,20 @@ function toggleButtonState(inputList, buttonElement, config) {
     }
 }
 
-
 function setEventListeners(formElement, config) {
     const inputList = Array.from(formElement.querySelectorAll(config.inputSelector));
     const buttonElement = formElement.querySelector(config.submitButtonSelector);
     toggleButtonState(inputList, buttonElement, config);
+    formElement.addEventListener('reset', () => {
+        setTimeout(() => {
+            toggleButtonState(inputList, buttonElement, config)
+        }, 0)
+    })
     inputList.forEach((inputElement) => {
         inputElement.addEventListener('input', () => {
             checkInputValidity(formElement, inputElement, config);
             toggleButtonState(inputList, buttonElement, config);
-        })        
+        })
     })
 }
 
@@ -60,3 +63,4 @@ function enableValidation(config) {
         setEventListeners(formElement, config)
     })
 }
+
