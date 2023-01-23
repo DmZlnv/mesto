@@ -1,3 +1,7 @@
+import Card from './Card.js'
+
+console.log(Card)
+
 const popupContainer = document.querySelector('.popup__container');
 const popupEditProfile = document.querySelector('.editprofile');
 //переменные полей ввода
@@ -23,7 +27,7 @@ const popupCloseCard = document.querySelector('.popup__close_card');
 const popupCloseProfile = document.querySelector('.popup__close_profile');
 //Переменные шаблона
 const cardsContainer = document.querySelector('.elements');
-const templateCard = document.querySelector('#elements-template').content;
+//const templateCard = document.querySelector('#elements-template').content;
 
 //Функция открытия попапа
 function openPopup(item) {
@@ -59,6 +63,7 @@ popups.forEach((popup) => {
   })
 })
 
+/*
 function createCard(name, link) {
   const cardElement = templateCard.querySelector('.elements__item').cloneNode(true);
   const elementLike = cardElement.querySelector('.elements__like');
@@ -89,7 +94,7 @@ function addCard(name, link) {
 
 initialCards.reverse().forEach((item) => {
   addCard(item.name, item.link);
-})
+}) */
 
 popupEditProfile.addEventListener('submit', function (evt) {
   evt.preventDefault();
@@ -123,4 +128,14 @@ const handleCloseByEsc = (evt) => {
   }
 }
 
-enableValidation(validationConfig);
+///7 PR
+const addCard = (item, templateSelector) => {
+  const card = new Card(item, '#elements-template');
+  cardsContainer.prepend(card.generateCard());
+}
+
+initialCards.forEach((item) => {
+addCard(item);
+})
+
+//enableValidation(validationConfig);
