@@ -1,4 +1,6 @@
-import Card from './Card.js'
+import Card from './Card.js';
+
+import {validationConfig, ValidationForm} from './validate.js';
 
 console.log(Card)
 
@@ -96,6 +98,13 @@ initialCards.reverse().forEach((item) => {
   addCard(item.name, item.link);
 }) */
 
+const openPopupImage = (name, link) => {
+  openPopup(popupFullImage);
+  popupBigImage.src = link;
+  popupDescImage.textContent = name;
+  popupBigImage.alt = name;
+}
+
 popupEditProfile.addEventListener('submit', function (evt) {
   evt.preventDefault();
   nameProfile.textContent = nameInput.value;
@@ -105,14 +114,14 @@ popupEditProfile.addEventListener('submit', function (evt) {
 
 popupCardEdit.addEventListener('submit', function (evt) {
   evt.preventDefault();
-  addCard(placeTitleInput.value, placeImgInput.value);
+  addCard({name: placeTitleInput.value, link: placeImgInput.value});
   closePopup(popupCardEdit);
   evt.target.reset();
   popupSubmitCard.disabled = true;
 });
 
 //6 Sprint
-const validationConfig = {
+/*const validationConfig = {
   formSelector: '.popup__form',
   inputSelector: '.popup__input',
   submitButtonSelector: '.popup__submit',
@@ -120,7 +129,7 @@ const validationConfig = {
   inactiveButtonClass: 'popup__submit_invalid',
   inputErrorClass: 'popup__input_type_error',
   errorClass: 'popup__input-error_visible'
-}
+}*/
 
 const handleCloseByEsc = (evt) => {
   if (evt.key === 'Escape') {
@@ -130,7 +139,7 @@ const handleCloseByEsc = (evt) => {
 
 ///7 PR
 const addCard = (item, templateSelector) => {
-  const card = new Card(item, '#elements-template');
+  const card = new Card(item, '#elements-template', openPopupImage);
   cardsContainer.prepend(card.generateCard());
 }
 
@@ -138,4 +147,8 @@ initialCards.forEach((item) => {
 addCard(item);
 })
 
-//enableValidation(validationConfig);
+const profileFormValidation = new ValidationForm(popupEditProfile, validationConfig);
+const cardFormValidation = new ValidationForm(popupCardEdit, validationConfig);
+
+profileFormValidation.enableValidaion();
+cardFormValidation.enableValidaion();
