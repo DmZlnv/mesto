@@ -117,7 +117,7 @@ popupCardEdit.addEventListener('submit', function (evt) {
   addCard({name: placeTitleInput.value, link: placeImgInput.value});
   closePopup(popupCardEdit);
   evt.target.reset();
-  popupSubmitCard.disabled = true;
+  //popupSubmitCard.disabled = true;
 });
 
 //6 Sprint

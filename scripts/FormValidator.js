@@ -90,7 +90,7 @@ resetValidation() {
   this._toggleButtonState();
 
   this._inputElement.forEach((input) => {
-    this._hideError(input)
+    this._hideInputError(input)
   });
 
 }
