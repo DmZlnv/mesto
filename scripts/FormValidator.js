@@ -9,7 +9,7 @@ export const validationConfig = {
 }
 
 
-export class ValidationForm {
+export class FormValidator {
   constructor(formElement, validationConfig)
   {
     this._formElement = formElement;
@@ -71,7 +71,7 @@ _setEventListeners() {
   this._toggleButtonState();
   this._formElement.addEventListener('reset', () => {
       setTimeout(() => {
-          toggleButtonState()
+          this._toggleButtonState()
       }, 0)
   })
   this._inputElement.forEach((input) => {
@@ -82,9 +82,20 @@ _setEventListeners() {
   })
 }
 
-enableValidaion() {
+enableValidation() {
   this._setEventListeners()
 }
+
+resetValidation() {
+  this._toggleButtonState();
+
+  this._inputElement.forEach((input) => {
+    this._hideError(input)
+  });
+
+}
+
+
 
 }
 

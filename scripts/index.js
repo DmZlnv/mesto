@@ -1,6 +1,6 @@
 import Card from './Card.js';
 
-import {validationConfig, ValidationForm} from './validate.js';
+import {validationConfig, FormValidator} from './FormValidator.js';
 
 console.log(Card)
 
@@ -138,17 +138,26 @@ const handleCloseByEsc = (evt) => {
 }
 
 ///7 PR
-const addCard = (item, templateSelector) => {
+const createCard = (item, templateSelector) => {
   const card = new Card(item, '#elements-template', openPopupImage);
-  cardsContainer.prepend(card.generateCard());
+  return card.generateCard();
+}
+
+
+const addCard = (item) => {
+  cardsContainer.prepend(createCard(item));
 }
 
 initialCards.forEach((item) => {
 addCard(item);
 })
 
-const profileFormValidation = new ValidationForm(popupEditProfile, validationConfig);
-const cardFormValidation = new ValidationForm(popupCardEdit, validationConfig);
+const profileFormValidation = new FormValidator(popupEditProfile, validationConfig);
+const cardFormValidation = new FormValidator(popupCardEdit, validationConfig);
 
-profileFormValidation.enableValidaion();
-cardFormValidation.enableValidaion();
+
+profileFormValidation.enableValidation();
+cardFormValidation.enableValidation();
+//profileFormValidation.resetValidation();
+cardFormValidation.resetValidation();
+
