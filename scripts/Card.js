@@ -7,6 +7,7 @@ class Card {
     this._openPopupImage = openPopupImage;
   }
 
+
   _getTemplate() {
     const cardElement = document
     .querySelector(this._templateSelector)
@@ -16,6 +17,7 @@ class Card {
 
     return cardElement
   }
+
 
   generateCard() {
     this._element = this._getTemplate();
