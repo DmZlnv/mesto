@@ -2,6 +2,7 @@ import Card from '../components/Card.js';
 import Section  from '../components/Section.js';
 import Popup from '../components/Popup.js'
 import { PopupWithForm } from '../components/PopupWithForm.js';
+import './index.css';
 
 import {FormValidator} from '../components/FormValidator.js';
 import {initialCards, validationConfig} from '../utils/constants.js';

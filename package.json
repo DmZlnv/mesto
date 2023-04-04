@@ -1,12 +1,13 @@
 {
-  "name": "mesto-praktikum",
+  "name": "mesto",
   "version": "1.0.0",
-  "description": "study project",
-  "main": "./pages/index.js",
+  "description": "## Описание проекта",
+  "main": "index.js",
   "scripts": {
     "build": "webpack --mode production",
     "dev": "webpack serve"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
@@ -17,14 +18,14 @@
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^6.7.3",
     "cssnano": "^6.0.0",
+    "html-webpack-plugin": "^5.5.0",
     "mini-css-extract-plugin": "^2.7.5",
-    "postcss-loader": "^7.1.0",
+    "postcss-loader": "^7.2.4",
     "webpack": "^5.77.0",
     "webpack-cli": "^5.0.1",
-    "webpack-dev-server": "^4.13.2",
-    "webpack-html-plugin": "^0.1.1"
+    "webpack-dev-server": "^4.13.2"
   },
   "dependencies": {
-    "core-js": "^3.29.1"
+    "core-js": "^3.30.0"
   }
 }
