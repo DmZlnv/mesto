@@ -228,22 +228,23 @@ profileEdit.addEventListener('click', () => {
   editProfile.setUserInfo;
 })*/
 
+
+
 function profileSubmit(name, profession) {
   userInfo.setUserInfo(name, profession);
   getEditProfile.close();
 }
 
 
+console.log(FormValidator);
+console.log(validationConfig)
 
-
-
-
-const profileFormValidation = new FormValidator(getEditProfile, validationConfig);
-const cardFormValidation = new FormValidator(cardEdit, validationConfig);
-
-
-profileFormValidation.enableValidation();
-cardFormValidation.enableValidation();
-//profileFormValidation.resetValidation();
-cardFormValidation.resetValidation();
+function enableValidation(config) {
+  const formList = Array.from(document.querySelectorAll(validationConfig.formSelector));
+  formList.forEach((formElement) => {
+    const formValidator = new FormValidator(formElement, validationConfig);
+    formValidator.enableValidation();
+  });
+}
+enableValidation(validationConfig);
 
