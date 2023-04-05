@@ -1,5 +1,3 @@
-import {nameInput, jobInput} from '../utils/constants.js'
-
 export default class UserInfo {
   constructor({name, profession}) {
     this._nameUser = name;

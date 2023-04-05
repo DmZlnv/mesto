@@ -2,8 +2,8 @@ import Popup from './Popup.js'
 export class PopupWithImage extends Popup {
   constructor(popupSelector) {
     super(popupSelector);
-    this._popupBigImage = document.querySelector(popupSelector).querySelector('.popup__bigimage');
-    this._popupDesc = document.querySelector(popupSelector).querySelector('.popup__descimage');
+    this._popupBigImage = this._popup.querySelector('.popup__bigimage');
+    this._popupDesc = this._popup.querySelector('.popup__descimage');
 
   }
 
@@ -15,12 +15,6 @@ export class PopupWithImage extends Popup {
 
   }
 
-  setEventListeners() {
-    super._setEventListeners();
-  }
 
-  _close() {
-    super.close();
-    this.popupSelector.reset();
-  }
+
 }
